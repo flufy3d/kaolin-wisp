@@ -12,12 +12,18 @@ Install git:
 conda install git
 ```
 
-Install OpenEXR:
-
+Install OpenEXR on Ubuntu:
 ```
-conda install -c conda-forge openexr
-
+sudo apt-get update
+sudo apt-get install libopenexr-dev 
 ```
+Install OpenEXR on Windows:
+```
+pip install pipwin
+pipwin install openexr
+```
+
+
 
 Install cuda-toolkit 11.3.1
 ```
