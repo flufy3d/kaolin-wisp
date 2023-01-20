@@ -31,6 +31,12 @@ conda install -c "nvidia/label/cuda-11.3.1" cuda-toolkit
 ```
 
 
+Install ninja
+```
+conda install -c conda-forge ninja
+
+```
+
 
 ### Quick Start
 Full installation with interactive visualizer, for torch 1.12.1, cuda 11.3 and kaolin 0.12.0:
