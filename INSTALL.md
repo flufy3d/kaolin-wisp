@@ -6,19 +6,19 @@ NVIDIA Kaolin Wisp can be installed either manually or using Docker.
 
 ### Prerequisite
 
-Install OpenEXR on Ubuntu:
+Install OpenEXR:
 
 ```
-sudo apt-get update
-sudo apt-get install libopenexr-dev 
-```
-
-Install OpenEXR on Windows:
+conda install -c conda-forge openexr
 
 ```
-pip install pipwin
-pipwin install openexr
+
+Install cuda-toolkit 11.3.1
 ```
+conda install -c "nvidia/label/cuda-11.3.1" cuda-toolkit
+```
+
+
 
 ### Quick Start
 Full installation with interactive visualizer, for torch 1.12.1, cuda 11.3 and kaolin 0.12.0:
@@ -26,8 +26,11 @@ Full installation with interactive visualizer, for torch 1.12.1, cuda 11.3 and k
 conda create -n wisp python=3.9
 git clone git@github.com:NVIDIAGameWorks/kaolin-wisp.git
 cd kaolin-wisp
-pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113
-pip install kaolin==0.12.0 -f https://nvidia-kaolin.s3.us-east-2.amazonaws.com/torch-1.12.1_cu113.html
+
+conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.3 -c pytorch
+
+pip install kaolin==0.13.0 -f https://nvidia-kaolin.s3.us-east-2.amazonaws.com/torch-1.12.1_cu113.html
+
 pip install -r requirements.txt
 pip install -r requirements_app.txt
 python setup.py develop
