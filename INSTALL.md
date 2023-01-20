@@ -6,6 +6,12 @@ NVIDIA Kaolin Wisp can be installed either manually or using Docker.
 
 ### Prerequisite
 
+Install git:
+
+```
+conda install git
+```
+
 Install OpenEXR:
 
 ```
